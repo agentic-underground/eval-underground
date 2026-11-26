@@ -31,6 +31,9 @@ $ uv sync                     # or: pip install -e .
 $ uv run eval-underground matrix --out out/   # the whole matrix: out/index.html, .md, .csv, .json
 ```
 
+`out/index.html` is one page with every model: hide benchmarks, narrow to one family or to base or
+instruct models, and sort by any column (best first; press again to reverse).
+
 The reviewed data ships in `data/`, so `matrix` and `mini` work offline. Re-importing a source needs
 `pip install 'eval-underground[import]'` (pyarrow).
 
@@ -65,12 +68,14 @@ attribution and links back to every one.
 ## Development
 
 ```console
-$ just check      # unit + story tests, offline, < 1 s
+$ uv run --frozen playwright install chromium-headless-shell   # once per machine, for the page story
+$ just check      # unit + story tests, offline, a few seconds
 $ just hooks      # once per clone: every commit and push is swept for anything that should not be public
 ```
 
-The story test drives the real command and checks every number in the produced HTML against the
-verbatim value in the reviewed data, with a parser that shares no code with the renderer.
+The story tests drive the real command (and, for the matrix page, a real headless browser) and check
+what a person would see against the reviewed data, read by code that shares nothing with the renderer.
+The gate runs uv with `--frozen`, so the lockfile is never re-resolved against a machine's own index.
 
 ## License
 

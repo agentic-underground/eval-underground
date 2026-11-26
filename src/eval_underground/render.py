@@ -70,8 +70,8 @@ def _td(c, col_id):
     title = "\n".join(f'{s["source"]}: {_fmt(s["value"])} — {s["locator"]} — verbatim {s["verbatim"]}'
                       for s in c["sources"])
     mark = '<span class="evu-disputed" title="sources disagree">±</span>' if c["status"] == "disputed" else ""
-    return (f'<td data-column="{_a(col_id)}"><a href="{_a(top["url"])}" title="{_a(title)}">'
-            f'{_fmt(c["value"])}</a>{mark}</td>')
+    return (f'<td data-column="{_a(col_id)}" data-value="{c["value"]!r}"><a href="{_a(top["url"])}" '
+            f'title="{_a(title)}">{_fmt(c["value"])}</a>{mark}</td>')
 
 
 MINI_STYLE = """
@@ -92,8 +92,13 @@ MINI_STYLE = """
 """
 
 
-def _table(m):
-    head = "".join(f'<th data-column="{_a(c["id"])}">{escape(c["label"])}</th>' for c in m["columns"])
+def _table(m, sortable=False):
+    def th(c):
+        label = escape(c["label"])
+        if sortable:  # a button, so the sort is reachable from the keyboard too
+            label = f'<button type="button" class="evu-sort">{label}</button>'
+        return f'<th data-column="{_a(c["id"])}">{label}</th>'
+    head = "".join(th(c) for c in m["columns"])
     body = []
     for row, cells in _grid(m):
         attrs = f'data-family="{_a(row["family"])}" data-kind="{_a(row["kind"])}"'
@@ -124,6 +129,26 @@ PAGE_SCRIPT = """
     });
   }
   page.querySelectorAll('select').forEach(function(s){s.addEventListener('change',apply);});
+  // Sort by a column: best first, a second press reverses; an empty cell always goes last.
+  page.querySelectorAll('button.evu-sort').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var th=btn.closest('th'), col=th.dataset.column, tbody=page.querySelector('tbody');
+      var desc=th.getAttribute('aria-sort')!=='descending';
+      page.querySelectorAll('thead th').forEach(function(h){h.removeAttribute('aria-sort');});
+      th.setAttribute('aria-sort',desc?'descending':'ascending');
+      var rows=Array.prototype.slice.call(tbody.rows);
+      function val(tr){
+        var td=tr.querySelector('td[data-column="'+CSS.escape(col)+'"]');
+        return td&&td.dataset.value!==undefined?parseFloat(td.dataset.value):null;
+      }
+      rows.sort(function(a,b){
+        var x=val(a), y=val(b);
+        if(x===null||y===null) return (x===null)-(y===null);
+        return desc?y-x:x-y;
+      });
+      rows.forEach(function(tr){tbody.appendChild(tr);});
+    });
+  });
   page.querySelectorAll('input[data-toggle]').forEach(function(box){
     box.addEventListener('change',function(){
       page.querySelectorAll('[data-column="'+CSS.escape(box.dataset.toggle)+'"]').forEach(function(el){
@@ -142,6 +167,10 @@ html,body{margin:0;background:#fff}
 .evu-page fieldset{border:1px solid var(--evu-line);border-radius:8px;margin:0 0 12px;padding:8px 12px;font-size:13px}
 .evu-page legend{color:var(--evu-muted);font-size:12px}
 .evu-page fieldset label{display:inline-block;margin:2px 14px 2px 0;white-space:nowrap}
+.evu-page button.evu-sort{all:unset;cursor:pointer}
+.evu-page button.evu-sort:focus-visible{outline:2px solid var(--evu-accent);outline-offset:2px}
+.evu-page th[aria-sort=descending] button.evu-sort::after{content:" ▼"}
+.evu-page th[aria-sort=ascending] button.evu-sort::after{content:" ▲"}
 [hidden]{display:none!important}
 """
 
@@ -159,5 +188,5 @@ def page_html(m, title="Open-weight models — published benchmark scores"):
     return ('<!doctype html><html lang="en"><head><meta charset="utf-8">'
             '<meta name="viewport" content="width=device-width,initial-scale=1">'
             f'<title>{escape(title)}</title><style>{MINI_STYLE}{PAGE_STYLE}</style></head><body>'
-            f'<div class="evu evu-page"><h1>{escape(title)}</h1>{controls}{_table(m)}{_caption(m)}</div>'
+            f'<div class="evu evu-page"><h1>{escape(title)}</h1>{controls}{_table(m, sortable=True)}{_caption(m)}</div>'
             f'<script>{PAGE_SCRIPT}</script></body></html>\n')
