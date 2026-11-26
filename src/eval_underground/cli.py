@@ -1,6 +1,7 @@
 """eval-underground — published benchmark scores for open-weight model families.
 
     eval-underground import open-llm-leaderboard-v2    fetch the archive, check its sha256, write data/
+    eval-underground agree hf-card-qwen3.5-9b         compare two blind readings; agreed cells enter data/
     eval-underground matrix --out out/                 the whole matrix: index.html, .md, .csv, .json
     eval-underground mini --model A --model B --column MMLU-Pro --out post/
                                                        a mini leaderboard to embed: .html, .md, .csv, .json
@@ -97,6 +98,26 @@ def cmd_import(args):
     return 0
 
 
+def cmd_agree(args):
+    """Compare a source's two blind readings; agreed cells enter data/cells/, the rest wait in data/held/."""
+    data = _data_dir(args)
+    sources, _, _ = store.load(data)
+    if args.source not in sources:
+        print(f"eval-underground: no source record data/sources/{args.source}.yaml", file=sys.stderr)
+        return 2
+    readings = data / "extractions" / args.source
+    a, b = (store.read(readings / f"{x}.yaml")["cells"] for x in ("a", "b"))
+    agreed, held = core.agree(sources[args.source], a, b)
+    store.dump(data / "cells" / f"{args.source}.yaml", {"source": args.source, "cells": agreed})
+    held_path = data / "held" / f"{args.source}.yaml"
+    if held:
+        store.dump(held_path, {"source": args.source, "held": held})
+    elif held_path.exists():
+        held_path.unlink()
+    print(f"{args.source}: {len(agreed)} agreed, {len(held)} held" + (f" — see {held_path}" if held else ""))
+    return 0
+
+
 def main(argv=None):
     p = argparse.ArgumentParser(prog="eval-underground", description=__doc__.split("\n")[0])
     p.add_argument("--data", help="the data directory (default: the repository's data/)")
@@ -104,6 +125,9 @@ def main(argv=None):
     i = sub.add_parser("import", help="fetch a source, check its sha256, and write its cells")
     i.add_argument("source")
     i.set_defaults(fn=cmd_import)
+    ag = sub.add_parser("agree", help="compare a source's two blind readings")
+    ag.add_argument("source")
+    ag.set_defaults(fn=cmd_agree)
     mx = sub.add_parser("matrix", help="render the whole matrix")
     mx.add_argument("--out", default="out")
     mx.set_defaults(fn=cmd_matrix)

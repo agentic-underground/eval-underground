@@ -52,10 +52,14 @@ def build_matrix(sources, cells_by_source, models):
                                      "label": column_label(c["benchmark"], c["setting"])})
             reports.setdefault((c["model"], cid), []).append({
                 "source": sid, "kind": src["kind"], "url": src["url"], "value": float(c["value"]),
+                "about": src.get("model") == c["model"],
                 "locator": c.get("locator", ""), "verbatim": c.get("verbatim", "")})
     cells = []
     for (model, cid), rs in sorted(reports.items()):
-        rs.sort(key=lambda r: (_rank(r["kind"]), r["source"]))
+        # preferred kind first; among one kind, the source ABOUT this model (its own card) first
+        rs.sort(key=lambda r: (_rank(r["kind"]), not r["about"], r["source"]))
+        for r in rs:
+            del r["about"]
         cells.append({"model": model, "column": cid, "value": rs[0]["value"],
                       "status": "disputed" if len({r["value"] for r in rs}) > 1 else "agreed", "sources": rs})
     used = {c["model"] for c in cells}
@@ -72,13 +76,14 @@ def _column_for(query, columns):
     if exact:
         return exact[0]
     q = query.casefold()
-    named = [c for c in columns if c["benchmark"].casefold() == q] or \
+    named = [c for c in columns if c["label"].casefold() == q] or \
+            [c for c in columns if c["benchmark"].casefold() == q] or \
             [c for c in columns if c["label"].casefold().startswith(q)]
     if len(named) == 1:
         return named[0]
     if named:
-        raise PickError(f"column {query!r} means {len(named)} columns; name one by its id:\n  "
-                        + "\n  ".join(f'{c["id"]}   ({c["label"]})' for c in named))
+        raise PickError(f"column {query!r} means {len(named)} columns, one per setting; name one by its label:\n  "
+                        + "\n  ".join(repr(c["label"]) for c in named))
     near = difflib.get_close_matches(query, sorted({c["benchmark"] for c in columns}), n=5, cutoff=0.3)
     raise PickError(f"no column {query!r}" + (f"; did you mean: {', '.join(near)}" if near else ""))
 
@@ -99,3 +104,32 @@ def pick(matrix, model_ids, column_queries):
     used = {r["source"] for c in cells for r in c["sources"]}
     return {"rows": [rows[m] for m in model_ids], "columns": cols, "cells": cells,
             "sources": {k: v for k, v in matrix["sources"].items() if k in used}}
+
+
+def _reading_key(r):
+    return (r["model"], r["benchmark"], r.get("mode", "unstated"))
+
+
+def _as_cell(source, r):
+    mode = r.get("mode", "unstated")
+    return {"model": r["model"], "benchmark": r["benchmark"],
+            "setting": {"protocol": source["protocol"], "mode": mode},
+            "value": float(r["value"]), "verbatim": str(r["verbatim"]),
+            "locator": f"{source['table']}, group '{r.get('group', '')}', "
+                       f"row '{r['benchmark']}', column '{r['model']}'"}
+
+
+def agree(source, a, b):
+    """Two blind readings of one source. A cell both read with the same value is agreed; anything else —
+    a different value, or a cell only one reading found — is held with both readings, never averaged
+    or picked, and never enters the matrix."""
+    ka = {_reading_key(r): r for r in a}
+    kb = {_reading_key(r): r for r in b}
+    agreed, held = [], []
+    for key in sorted(ka.keys() | kb.keys()):
+        ra, rb = ka.get(key), kb.get(key)
+        if ra is not None and rb is not None and float(ra["value"]) == float(rb["value"]):
+            agreed.append(_as_cell(source, ra))
+        else:
+            held.append({"key": list(key), "a": ra, "b": rb})
+    return agreed, held

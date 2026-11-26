@@ -3,6 +3,8 @@
     data/sources/<id>.yaml   where a source lives: URL, revision, retrieved, sha256
     data/cells/<id>.yaml     what was read from it: model, benchmark, setting, value, locator, verbatim
     data/models.yaml         one row per model
+    data/extractions/<id>/{a,b}.yaml   two blind readings of a source, before they are agreed
+    data/held/<id>.yaml      what the two readings disagreed on, waiting for a person
 """
 from pathlib import Path
 
@@ -12,7 +14,7 @@ import yaml
 _Loader = getattr(yaml, "CSafeLoader", yaml.SafeLoader)
 
 
-def _read(p):
+def read(p):
     return yaml.load(Path(p).read_text(), Loader=_Loader)
 
 
@@ -20,7 +22,7 @@ def load(data_dir):
     d = Path(data_dir)
     sources = {}
     for p in sorted((d / "sources").glob("*.yaml")):
-        s = _read(p)
+        s = read(p)
         if s["id"] != p.stem:
             raise ValueError(f"{p}: id {s['id']!r} does not match its file name")
         sources[s["id"]] = s
@@ -28,8 +30,8 @@ def load(data_dir):
     for p in sorted((d / "cells").glob("*.yaml")):
         if p.stem not in sources:
             raise ValueError(f"{p}: no source record data/sources/{p.stem}.yaml")
-        cells[p.stem] = _read(p)["cells"]
-    models = _read(d / "models.yaml")["models"] if (d / "models.yaml").exists() else []
+        cells[p.stem] = read(p)["cells"]
+    models = read(d / "models.yaml")["models"] if (d / "models.yaml").exists() else []
     return sources, cells, models
 
 

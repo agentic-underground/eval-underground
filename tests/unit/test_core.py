@@ -84,3 +84,62 @@ def test_the_leaderboard_import_reads_raw_scores_as_percentages_and_keeps_the_ve
 def test_a_pretrained_row_is_base():
     _, rows = leaderboard.to_cells([{**ROW, "Type": "🟢 pretrained"}])
     assert rows[0]["kind"] == "base"
+
+
+# --- two blind readings of one source -------------------------------------------------------------
+
+def reading(model, bench, value, mode="unstated", group="Knowledge & STEM"):
+    return {"model": model, "benchmark": bench, "mode": mode, "value": value, "verbatim": str(value), "group": group}
+
+
+CARD = {"id": "card", "kind": "model_card", "url": "https://example.org/card", "protocol": "Qwen3.5 model card",
+        "table": "Benchmark Results › Language"}
+
+
+def test_two_readings_that_match_are_agreed_cells_with_the_card_as_their_setting():
+    a = [reading("Q/x", "MMLU-Pro", 82.5)]
+    agreed, held = core.agree(CARD, a, [dict(r) for r in a])
+    assert held == []
+    (c,) = agreed
+    assert c["setting"] == {"protocol": "Qwen3.5 model card", "mode": "unstated"}
+    assert c["value"] == 82.5 and c["verbatim"] == "82.5"
+    assert c["locator"] == "Benchmark Results › Language, group 'Knowledge & STEM', row 'MMLU-Pro', column 'Q/x'"
+
+
+def test_a_value_the_readings_disagree_on_is_held_with_both_readings():
+    agreed, held = core.agree(CARD, [reading("Q/x", "MMLU-Pro", 82.5)], [reading("Q/x", "MMLU-Pro", 85.2)])
+    assert agreed == []
+    (h,) = held
+    assert (h["a"]["value"], h["b"]["value"]) == (82.5, 85.2)
+
+
+def test_a_cell_only_one_reading_found_is_held():
+    agreed, held = core.agree(CARD, [reading("Q/x", "MMLU-Pro", 82.5), reading("Q/x", "IFEval", 91.0)],
+                              [reading("Q/x", "MMLU-Pro", 82.5)])
+    assert [c["benchmark"] for c in agreed] == ["MMLU-Pro"]
+    assert held[0]["b"] is None and held[0]["a"]["benchmark"] == "IFEval"
+
+
+def test_one_benchmark_in_two_modes_is_two_cells():
+    both = [reading("Q/x", "IFEval", 70.0, mode="non-thinking"), reading("Q/x", "IFEval", 80.0, mode="thinking")]
+    agreed, held = core.agree(CARD, both, [dict(r) for r in both])
+    assert held == [] and len(agreed) == 2
+    m = core.build_matrix({"card": CARD}, {"card": agreed}, models("Q/x"))
+    assert sorted(c["label"] for c in m["columns"]) == ["IFEval · Qwen3.5 model card · non-thinking",
+                                                         "IFEval · Qwen3.5 model card · thinking"]
+
+
+def test_among_cards_that_agree_the_one_about_the_model_is_shown_first():
+    own = {"id": "z-own", "kind": "model_card", "url": "https://example.org/own", "model": "Q/x"}
+    other = {"id": "a-other", "kind": "model_card", "url": "https://example.org/other", "model": "Q/y"}
+    m = core.build_matrix({"z-own": own, "a-other": other},
+                          {"z-own": [cell("Q/x", 50.0)], "a-other": [cell("Q/x", 50.0)]}, models("Q/x"))
+    assert [s["source"] for s in m["cells"][0]["sources"]] == ["z-own", "a-other"]
+
+
+def test_a_column_named_by_its_whole_label_is_that_column_even_when_it_prefixes_another():
+    base = {"protocol": "card"}
+    m = core.build_matrix(SRC, {"lb": [cell("a/x", 1.0, setting=base),
+                                       cell("a/x", 2.0, setting={**base, "mode": "thinking"})]}, models("a/x"))
+    (col,) = core.pick(m, ["a/x"], ["MMLU-Pro · card"])["columns"]
+    assert col["label"] == "MMLU-Pro · card"
