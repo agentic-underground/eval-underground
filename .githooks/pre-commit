@@ -1,0 +1,3 @@
+#!/bin/sh
+# Every commit is swept for anything that should not be public: scripts/sweep.py says what.
+exec python3 "$(git rev-parse --show-toplevel)/scripts/sweep.py"
