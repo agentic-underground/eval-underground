@@ -1,0 +1,24 @@
+[project]
+name = "eval-underground"
+version = "0.1.0"
+description = "Published benchmark scores for open-weight model families: one matrix, every number cited, and an embeddable mini leaderboard."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+dependencies = ["pyyaml>=6"]
+
+[project.optional-dependencies]
+import = ["pyarrow>=15"]
+
+[project.scripts]
+eval-underground = "eval_underground.cli:main"
+
+[dependency-groups]
+dev = ["pytest>=8", "pyarrow>=15"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+addopts = "-p no:cacheprovider"

@@ -1,0 +1,14 @@
+id: open-llm-leaderboard-v2
+kind: leaderboard
+title: Open LLM Leaderboard v2 archive (Hugging Face)
+url: https://huggingface.co/datasets/open-llm-leaderboard/contents/resolve/9c09a7cae43334062a82cb164f2ef255013dafa2/data/train-00000-of-00001.parquet
+revision: 9c09a7cae43334062a82cb164f2ef255013dafa2
+retrieved: 2026-11-26
+sha256: f13a7061e63133bc8745d89f8c7a56148584940ede22d3b27e21cad1e078dca5
+license: the dataset card at https://huggingface.co/datasets/open-llm-leaderboard/contents
+taken: rows marked "Official Providers" only; the raw score columns, as percentages
+settings_doc:
+  # The archive carries no shots or metrics; these are the leaderboard's own statement of them.
+  url: https://huggingface.co/docs/leaderboards/open_llm_leaderboard/about
+  retrieved: 2026-11-26
+  sha256: af7f01ca7164695eae2596cc996c30f464fe888c33bda5652424079efabc38cd
