@@ -1,0 +1,890 @@
+source: hf-card-qwen3.5-27b
+cells:
+- model: Qwen/Qwen3.5-122B-A10B
+  benchmark: AA-LCR
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 66.9
+  verbatim: '66.9'
+  locator: Benchmark Results › Language, group 'Long Context', row 'AA-LCR', column 'Qwen/Qwen3.5-122B-A10B'
+- model: Qwen/Qwen3.5-122B-A10B
+  benchmark: BFCL-V4
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 72.2
+  verbatim: '72.2'
+  locator: Benchmark Results › Language, group 'General Agent', row 'BFCL-V4', column 'Qwen/Qwen3.5-122B-A10B'
+- model: Qwen/Qwen3.5-122B-A10B
+  benchmark: Browsecomp
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 63.8
+  verbatim: '63.8'
+  locator: Benchmark Results › Language, group 'Search Agent', row 'Browsecomp', column 'Qwen/Qwen3.5-122B-A10B'
+- model: Qwen/Qwen3.5-122B-A10B
+  benchmark: Browsecomp-zh
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 69.9
+  verbatim: '69.9'
+  locator: Benchmark Results › Language, group 'Search Agent', row 'Browsecomp-zh', column 'Qwen/Qwen3.5-122B-A10B'
+- model: Qwen/Qwen3.5-122B-A10B
+  benchmark: C-Eval
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 91.9
+  verbatim: '91.9'
+  locator: Benchmark Results › Language, group 'Knowledge', row 'C-Eval', column 'Qwen/Qwen3.5-122B-A10B'
+- model: Qwen/Qwen3.5-122B-A10B
+  benchmark: CodeForces
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 2100.0
+  verbatim: '2100'
+  locator: Benchmark Results › Language, group 'Coding', row 'CodeForces', column 'Qwen/Qwen3.5-122B-A10B'
+- model: Qwen/Qwen3.5-122B-A10B
+  benchmark: DeepPlanning
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 24.1
+  verbatim: '24.1'
+  locator: Benchmark Results › Language, group 'General Agent', row 'DeepPlanning', column 'Qwen/Qwen3.5-122B-A10B'
+- model: Qwen/Qwen3.5-122B-A10B
+  benchmark: FullStackBench en
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 62.6
+  verbatim: '62.6'
+  locator: Benchmark Results › Language, group 'Coding', row 'FullStackBench en', column 'Qwen/Qwen3.5-122B-A10B'
+- model: Qwen/Qwen3.5-122B-A10B
+  benchmark: FullStackBench zh
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 58.7
+  verbatim: '58.7'
+  locator: Benchmark Results › Language, group 'Coding', row 'FullStackBench zh', column 'Qwen/Qwen3.5-122B-A10B'
+- model: Qwen/Qwen3.5-122B-A10B
+  benchmark: GPQA Diamond
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 86.6
+  verbatim: '86.6'
+  locator: Benchmark Results › Language, group 'STEM & Reasoning', row 'GPQA Diamond', column 'Qwen/Qwen3.5-122B-A10B'
+- model: Qwen/Qwen3.5-122B-A10B
+  benchmark: Global PIQA
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 88.4
+  verbatim: '88.4'
+  locator: Benchmark Results › Language, group 'Multilingualism', row 'Global PIQA', column 'Qwen/Qwen3.5-122B-A10B'
+- model: Qwen/Qwen3.5-122B-A10B
+  benchmark: HLE w/ CoT
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 25.3
+  verbatim: '25.3'
+  locator: Benchmark Results › Language, group 'STEM & Reasoning', row 'HLE w/ CoT', column 'Qwen/Qwen3.5-122B-A10B'
+- model: Qwen/Qwen3.5-122B-A10B
+  benchmark: HLE w/ tool
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 47.5
+  verbatim: '47.5'
+  locator: Benchmark Results › Language, group 'Search Agent', row 'HLE w/ tool', column 'Qwen/Qwen3.5-122B-A10B'
+- model: Qwen/Qwen3.5-122B-A10B
+  benchmark: HMMT Feb 25
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 91.4
+  verbatim: '91.4'
+  locator: Benchmark Results › Language, group 'STEM & Reasoning', row 'HMMT Feb 25', column 'Qwen/Qwen3.5-122B-A10B'
+- model: Qwen/Qwen3.5-122B-A10B
+  benchmark: HMMT Nov 25
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 90.3
+  verbatim: '90.3'
+  locator: Benchmark Results › Language, group 'STEM & Reasoning', row 'HMMT Nov 25', column 'Qwen/Qwen3.5-122B-A10B'
+- model: Qwen/Qwen3.5-122B-A10B
+  benchmark: IFBench
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 76.1
+  verbatim: '76.1'
+  locator: Benchmark Results › Language, group 'Instruction Following', row 'IFBench', column 'Qwen/Qwen3.5-122B-A10B'
+- model: Qwen/Qwen3.5-122B-A10B
+  benchmark: IFEval
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 93.4
+  verbatim: '93.4'
+  locator: Benchmark Results › Language, group 'Instruction Following', row 'IFEval', column 'Qwen/Qwen3.5-122B-A10B'
+- model: Qwen/Qwen3.5-122B-A10B
+  benchmark: INCLUDE
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 82.8
+  verbatim: '82.8'
+  locator: Benchmark Results › Language, group 'Multilingualism', row 'INCLUDE', column 'Qwen/Qwen3.5-122B-A10B'
+- model: Qwen/Qwen3.5-122B-A10B
+  benchmark: LiveCodeBench v6
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 78.9
+  verbatim: '78.9'
+  locator: Benchmark Results › Language, group 'Coding', row 'LiveCodeBench v6', column 'Qwen/Qwen3.5-122B-A10B'
+- model: Qwen/Qwen3.5-122B-A10B
+  benchmark: LongBench v2
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 60.2
+  verbatim: '60.2'
+  locator: Benchmark Results › Language, group 'Long Context', row 'LongBench v2', column 'Qwen/Qwen3.5-122B-A10B'
+- model: Qwen/Qwen3.5-122B-A10B
+  benchmark: MAXIFE
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 87.9
+  verbatim: '87.9'
+  locator: Benchmark Results › Language, group 'Multilingualism', row 'MAXIFE', column 'Qwen/Qwen3.5-122B-A10B'
+- model: Qwen/Qwen3.5-122B-A10B
+  benchmark: MMLU-Pro
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 86.7
+  verbatim: '86.7'
+  locator: Benchmark Results › Language, group 'Knowledge', row 'MMLU-Pro', column 'Qwen/Qwen3.5-122B-A10B'
+- model: Qwen/Qwen3.5-122B-A10B
+  benchmark: MMLU-ProX
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 82.2
+  verbatim: '82.2'
+  locator: Benchmark Results › Language, group 'Multilingualism', row 'MMLU-ProX', column 'Qwen/Qwen3.5-122B-A10B'
+- model: Qwen/Qwen3.5-122B-A10B
+  benchmark: MMLU-Redux
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 94.0
+  verbatim: '94.0'
+  locator: Benchmark Results › Language, group 'Knowledge', row 'MMLU-Redux', column 'Qwen/Qwen3.5-122B-A10B'
+- model: Qwen/Qwen3.5-122B-A10B
+  benchmark: MMMLU
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 86.7
+  verbatim: '86.7'
+  locator: Benchmark Results › Language, group 'Multilingualism', row 'MMMLU', column 'Qwen/Qwen3.5-122B-A10B'
+- model: Qwen/Qwen3.5-122B-A10B
+  benchmark: MultiChallenge
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 61.5
+  verbatim: '61.5'
+  locator: Benchmark Results › Language, group 'Instruction Following', row 'MultiChallenge', column 'Qwen/Qwen3.5-122B-A10B'
+- model: Qwen/Qwen3.5-122B-A10B
+  benchmark: NOVA-63
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 58.6
+  verbatim: '58.6'
+  locator: Benchmark Results › Language, group 'Multilingualism', row 'NOVA-63', column 'Qwen/Qwen3.5-122B-A10B'
+- model: Qwen/Qwen3.5-122B-A10B
+  benchmark: OJBench
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 39.5
+  verbatim: '39.5'
+  locator: Benchmark Results › Language, group 'Coding', row 'OJBench', column 'Qwen/Qwen3.5-122B-A10B'
+- model: Qwen/Qwen3.5-122B-A10B
+  benchmark: PolyMATH
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 68.9
+  verbatim: '68.9'
+  locator: Benchmark Results › Language, group 'Multilingualism', row 'PolyMATH', column 'Qwen/Qwen3.5-122B-A10B'
+- model: Qwen/Qwen3.5-122B-A10B
+  benchmark: SWE-bench Verified
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 72.0
+  verbatim: '72.0'
+  locator: Benchmark Results › Language, group 'Coding', row 'SWE-bench Verified', column 'Qwen/Qwen3.5-122B-A10B'
+- model: Qwen/Qwen3.5-122B-A10B
+  benchmark: Seal-0
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 44.1
+  verbatim: '44.1'
+  locator: Benchmark Results › Language, group 'Search Agent', row 'Seal-0', column 'Qwen/Qwen3.5-122B-A10B'
+- model: Qwen/Qwen3.5-122B-A10B
+  benchmark: SuperGPQA
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 67.1
+  verbatim: '67.1'
+  locator: Benchmark Results › Language, group 'Knowledge', row 'SuperGPQA', column 'Qwen/Qwen3.5-122B-A10B'
+- model: Qwen/Qwen3.5-122B-A10B
+  benchmark: TAU2-Bench
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 79.5
+  verbatim: '79.5'
+  locator: Benchmark Results › Language, group 'General Agent', row 'TAU2-Bench', column 'Qwen/Qwen3.5-122B-A10B'
+- model: Qwen/Qwen3.5-122B-A10B
+  benchmark: Terminal Bench 2
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 49.4
+  verbatim: '49.4'
+  locator: Benchmark Results › Language, group 'Coding', row 'Terminal Bench 2', column 'Qwen/Qwen3.5-122B-A10B'
+- model: Qwen/Qwen3.5-122B-A10B
+  benchmark: VITA-Bench
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 33.6
+  verbatim: '33.6'
+  locator: Benchmark Results › Language, group 'General Agent', row 'VITA-Bench', column 'Qwen/Qwen3.5-122B-A10B'
+- model: Qwen/Qwen3.5-122B-A10B
+  benchmark: WMT24++
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 78.3
+  verbatim: '78.3'
+  locator: Benchmark Results › Language, group 'Multilingualism', row 'WMT24++', column 'Qwen/Qwen3.5-122B-A10B'
+- model: Qwen/Qwen3.5-122B-A10B
+  benchmark: WideSearch
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 60.5
+  verbatim: '60.5'
+  locator: Benchmark Results › Language, group 'Search Agent', row 'WideSearch', column 'Qwen/Qwen3.5-122B-A10B'
+- model: Qwen/Qwen3.5-27B
+  benchmark: AA-LCR
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 66.1
+  verbatim: '66.1'
+  locator: Benchmark Results › Language, group 'Long Context', row 'AA-LCR', column 'Qwen/Qwen3.5-27B'
+- model: Qwen/Qwen3.5-27B
+  benchmark: BFCL-V4
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 68.5
+  verbatim: '68.5'
+  locator: Benchmark Results › Language, group 'General Agent', row 'BFCL-V4', column 'Qwen/Qwen3.5-27B'
+- model: Qwen/Qwen3.5-27B
+  benchmark: Browsecomp
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 61.0
+  verbatim: '61.0'
+  locator: Benchmark Results › Language, group 'Search Agent', row 'Browsecomp', column 'Qwen/Qwen3.5-27B'
+- model: Qwen/Qwen3.5-27B
+  benchmark: Browsecomp-zh
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 62.1
+  verbatim: '62.1'
+  locator: Benchmark Results › Language, group 'Search Agent', row 'Browsecomp-zh', column 'Qwen/Qwen3.5-27B'
+- model: Qwen/Qwen3.5-27B
+  benchmark: C-Eval
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 90.5
+  verbatim: '90.5'
+  locator: Benchmark Results › Language, group 'Knowledge', row 'C-Eval', column 'Qwen/Qwen3.5-27B'
+- model: Qwen/Qwen3.5-27B
+  benchmark: CodeForces
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 1899.0
+  verbatim: '1899'
+  locator: Benchmark Results › Language, group 'Coding', row 'CodeForces', column 'Qwen/Qwen3.5-27B'
+- model: Qwen/Qwen3.5-27B
+  benchmark: DeepPlanning
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 22.6
+  verbatim: '22.6'
+  locator: Benchmark Results › Language, group 'General Agent', row 'DeepPlanning', column 'Qwen/Qwen3.5-27B'
+- model: Qwen/Qwen3.5-27B
+  benchmark: FullStackBench en
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 60.1
+  verbatim: '60.1'
+  locator: Benchmark Results › Language, group 'Coding', row 'FullStackBench en', column 'Qwen/Qwen3.5-27B'
+- model: Qwen/Qwen3.5-27B
+  benchmark: FullStackBench zh
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 57.4
+  verbatim: '57.4'
+  locator: Benchmark Results › Language, group 'Coding', row 'FullStackBench zh', column 'Qwen/Qwen3.5-27B'
+- model: Qwen/Qwen3.5-27B
+  benchmark: GPQA Diamond
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 85.5
+  verbatim: '85.5'
+  locator: Benchmark Results › Language, group 'STEM & Reasoning', row 'GPQA Diamond', column 'Qwen/Qwen3.5-27B'
+- model: Qwen/Qwen3.5-27B
+  benchmark: Global PIQA
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 87.5
+  verbatim: '87.5'
+  locator: Benchmark Results › Language, group 'Multilingualism', row 'Global PIQA', column 'Qwen/Qwen3.5-27B'
+- model: Qwen/Qwen3.5-27B
+  benchmark: HLE w/ CoT
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 24.3
+  verbatim: '24.3'
+  locator: Benchmark Results › Language, group 'STEM & Reasoning', row 'HLE w/ CoT', column 'Qwen/Qwen3.5-27B'
+- model: Qwen/Qwen3.5-27B
+  benchmark: HLE w/ tool
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 48.5
+  verbatim: '48.5'
+  locator: Benchmark Results › Language, group 'Search Agent', row 'HLE w/ tool', column 'Qwen/Qwen3.5-27B'
+- model: Qwen/Qwen3.5-27B
+  benchmark: HMMT Feb 25
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 92.0
+  verbatim: '92.0'
+  locator: Benchmark Results › Language, group 'STEM & Reasoning', row 'HMMT Feb 25', column 'Qwen/Qwen3.5-27B'
+- model: Qwen/Qwen3.5-27B
+  benchmark: HMMT Nov 25
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 89.8
+  verbatim: '89.8'
+  locator: Benchmark Results › Language, group 'STEM & Reasoning', row 'HMMT Nov 25', column 'Qwen/Qwen3.5-27B'
+- model: Qwen/Qwen3.5-27B
+  benchmark: IFBench
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 76.5
+  verbatim: '76.5'
+  locator: Benchmark Results › Language, group 'Instruction Following', row 'IFBench', column 'Qwen/Qwen3.5-27B'
+- model: Qwen/Qwen3.5-27B
+  benchmark: IFEval
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 95.0
+  verbatim: '95.0'
+  locator: Benchmark Results › Language, group 'Instruction Following', row 'IFEval', column 'Qwen/Qwen3.5-27B'
+- model: Qwen/Qwen3.5-27B
+  benchmark: INCLUDE
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 81.6
+  verbatim: '81.6'
+  locator: Benchmark Results › Language, group 'Multilingualism', row 'INCLUDE', column 'Qwen/Qwen3.5-27B'
+- model: Qwen/Qwen3.5-27B
+  benchmark: LiveCodeBench v6
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 80.7
+  verbatim: '80.7'
+  locator: Benchmark Results › Language, group 'Coding', row 'LiveCodeBench v6', column 'Qwen/Qwen3.5-27B'
+- model: Qwen/Qwen3.5-27B
+  benchmark: LongBench v2
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 60.6
+  verbatim: '60.6'
+  locator: Benchmark Results › Language, group 'Long Context', row 'LongBench v2', column 'Qwen/Qwen3.5-27B'
+- model: Qwen/Qwen3.5-27B
+  benchmark: MAXIFE
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 88.0
+  verbatim: '88.0'
+  locator: Benchmark Results › Language, group 'Multilingualism', row 'MAXIFE', column 'Qwen/Qwen3.5-27B'
+- model: Qwen/Qwen3.5-27B
+  benchmark: MMLU-Pro
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 86.1
+  verbatim: '86.1'
+  locator: Benchmark Results › Language, group 'Knowledge', row 'MMLU-Pro', column 'Qwen/Qwen3.5-27B'
+- model: Qwen/Qwen3.5-27B
+  benchmark: MMLU-ProX
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 82.2
+  verbatim: '82.2'
+  locator: Benchmark Results › Language, group 'Multilingualism', row 'MMLU-ProX', column 'Qwen/Qwen3.5-27B'
+- model: Qwen/Qwen3.5-27B
+  benchmark: MMLU-Redux
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 93.2
+  verbatim: '93.2'
+  locator: Benchmark Results › Language, group 'Knowledge', row 'MMLU-Redux', column 'Qwen/Qwen3.5-27B'
+- model: Qwen/Qwen3.5-27B
+  benchmark: MMMLU
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 85.9
+  verbatim: '85.9'
+  locator: Benchmark Results › Language, group 'Multilingualism', row 'MMMLU', column 'Qwen/Qwen3.5-27B'
+- model: Qwen/Qwen3.5-27B
+  benchmark: MultiChallenge
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 60.8
+  verbatim: '60.8'
+  locator: Benchmark Results › Language, group 'Instruction Following', row 'MultiChallenge', column 'Qwen/Qwen3.5-27B'
+- model: Qwen/Qwen3.5-27B
+  benchmark: NOVA-63
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 58.1
+  verbatim: '58.1'
+  locator: Benchmark Results › Language, group 'Multilingualism', row 'NOVA-63', column 'Qwen/Qwen3.5-27B'
+- model: Qwen/Qwen3.5-27B
+  benchmark: OJBench
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 40.1
+  verbatim: '40.1'
+  locator: Benchmark Results › Language, group 'Coding', row 'OJBench', column 'Qwen/Qwen3.5-27B'
+- model: Qwen/Qwen3.5-27B
+  benchmark: PolyMATH
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 71.2
+  verbatim: '71.2'
+  locator: Benchmark Results › Language, group 'Multilingualism', row 'PolyMATH', column 'Qwen/Qwen3.5-27B'
+- model: Qwen/Qwen3.5-27B
+  benchmark: SWE-bench Verified
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 72.4
+  verbatim: '72.4'
+  locator: Benchmark Results › Language, group 'Coding', row 'SWE-bench Verified', column 'Qwen/Qwen3.5-27B'
+- model: Qwen/Qwen3.5-27B
+  benchmark: Seal-0
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 47.2
+  verbatim: '47.2'
+  locator: Benchmark Results › Language, group 'Search Agent', row 'Seal-0', column 'Qwen/Qwen3.5-27B'
+- model: Qwen/Qwen3.5-27B
+  benchmark: SuperGPQA
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 65.6
+  verbatim: '65.6'
+  locator: Benchmark Results › Language, group 'Knowledge', row 'SuperGPQA', column 'Qwen/Qwen3.5-27B'
+- model: Qwen/Qwen3.5-27B
+  benchmark: TAU2-Bench
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 79.0
+  verbatim: '79.0'
+  locator: Benchmark Results › Language, group 'General Agent', row 'TAU2-Bench', column 'Qwen/Qwen3.5-27B'
+- model: Qwen/Qwen3.5-27B
+  benchmark: Terminal Bench 2
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 41.6
+  verbatim: '41.6'
+  locator: Benchmark Results › Language, group 'Coding', row 'Terminal Bench 2', column 'Qwen/Qwen3.5-27B'
+- model: Qwen/Qwen3.5-27B
+  benchmark: VITA-Bench
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 41.9
+  verbatim: '41.9'
+  locator: Benchmark Results › Language, group 'General Agent', row 'VITA-Bench', column 'Qwen/Qwen3.5-27B'
+- model: Qwen/Qwen3.5-27B
+  benchmark: WMT24++
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 77.6
+  verbatim: '77.6'
+  locator: Benchmark Results › Language, group 'Multilingualism', row 'WMT24++', column 'Qwen/Qwen3.5-27B'
+- model: Qwen/Qwen3.5-27B
+  benchmark: WideSearch
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 61.1
+  verbatim: '61.1'
+  locator: Benchmark Results › Language, group 'Search Agent', row 'WideSearch', column 'Qwen/Qwen3.5-27B'
+- model: Qwen/Qwen3.5-35B-A3B
+  benchmark: AA-LCR
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 58.5
+  verbatim: '58.5'
+  locator: Benchmark Results › Language, group 'Long Context', row 'AA-LCR', column 'Qwen/Qwen3.5-35B-A3B'
+- model: Qwen/Qwen3.5-35B-A3B
+  benchmark: BFCL-V4
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 67.3
+  verbatim: '67.3'
+  locator: Benchmark Results › Language, group 'General Agent', row 'BFCL-V4', column 'Qwen/Qwen3.5-35B-A3B'
+- model: Qwen/Qwen3.5-35B-A3B
+  benchmark: Browsecomp
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 61.0
+  verbatim: '61.0'
+  locator: Benchmark Results › Language, group 'Search Agent', row 'Browsecomp', column 'Qwen/Qwen3.5-35B-A3B'
+- model: Qwen/Qwen3.5-35B-A3B
+  benchmark: Browsecomp-zh
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 69.5
+  verbatim: '69.5'
+  locator: Benchmark Results › Language, group 'Search Agent', row 'Browsecomp-zh', column 'Qwen/Qwen3.5-35B-A3B'
+- model: Qwen/Qwen3.5-35B-A3B
+  benchmark: C-Eval
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 90.2
+  verbatim: '90.2'
+  locator: Benchmark Results › Language, group 'Knowledge', row 'C-Eval', column 'Qwen/Qwen3.5-35B-A3B'
+- model: Qwen/Qwen3.5-35B-A3B
+  benchmark: CodeForces
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 2028.0
+  verbatim: '2028'
+  locator: Benchmark Results › Language, group 'Coding', row 'CodeForces', column 'Qwen/Qwen3.5-35B-A3B'
+- model: Qwen/Qwen3.5-35B-A3B
+  benchmark: DeepPlanning
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 22.8
+  verbatim: '22.8'
+  locator: Benchmark Results › Language, group 'General Agent', row 'DeepPlanning', column 'Qwen/Qwen3.5-35B-A3B'
+- model: Qwen/Qwen3.5-35B-A3B
+  benchmark: FullStackBench en
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 58.1
+  verbatim: '58.1'
+  locator: Benchmark Results › Language, group 'Coding', row 'FullStackBench en', column 'Qwen/Qwen3.5-35B-A3B'
+- model: Qwen/Qwen3.5-35B-A3B
+  benchmark: FullStackBench zh
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 55.0
+  verbatim: '55.0'
+  locator: Benchmark Results › Language, group 'Coding', row 'FullStackBench zh', column 'Qwen/Qwen3.5-35B-A3B'
+- model: Qwen/Qwen3.5-35B-A3B
+  benchmark: GPQA Diamond
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 84.2
+  verbatim: '84.2'
+  locator: Benchmark Results › Language, group 'STEM & Reasoning', row 'GPQA Diamond', column 'Qwen/Qwen3.5-35B-A3B'
+- model: Qwen/Qwen3.5-35B-A3B
+  benchmark: Global PIQA
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 86.6
+  verbatim: '86.6'
+  locator: Benchmark Results › Language, group 'Multilingualism', row 'Global PIQA', column 'Qwen/Qwen3.5-35B-A3B'
+- model: Qwen/Qwen3.5-35B-A3B
+  benchmark: HLE w/ CoT
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 22.4
+  verbatim: '22.4'
+  locator: Benchmark Results › Language, group 'STEM & Reasoning', row 'HLE w/ CoT', column 'Qwen/Qwen3.5-35B-A3B'
+- model: Qwen/Qwen3.5-35B-A3B
+  benchmark: HLE w/ tool
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 47.4
+  verbatim: '47.4'
+  locator: Benchmark Results › Language, group 'Search Agent', row 'HLE w/ tool', column 'Qwen/Qwen3.5-35B-A3B'
+- model: Qwen/Qwen3.5-35B-A3B
+  benchmark: HMMT Feb 25
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 89.0
+  verbatim: '89.0'
+  locator: Benchmark Results › Language, group 'STEM & Reasoning', row 'HMMT Feb 25', column 'Qwen/Qwen3.5-35B-A3B'
+- model: Qwen/Qwen3.5-35B-A3B
+  benchmark: HMMT Nov 25
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 89.2
+  verbatim: '89.2'
+  locator: Benchmark Results › Language, group 'STEM & Reasoning', row 'HMMT Nov 25', column 'Qwen/Qwen3.5-35B-A3B'
+- model: Qwen/Qwen3.5-35B-A3B
+  benchmark: IFBench
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 70.2
+  verbatim: '70.2'
+  locator: Benchmark Results › Language, group 'Instruction Following', row 'IFBench', column 'Qwen/Qwen3.5-35B-A3B'
+- model: Qwen/Qwen3.5-35B-A3B
+  benchmark: IFEval
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 91.9
+  verbatim: '91.9'
+  locator: Benchmark Results › Language, group 'Instruction Following', row 'IFEval', column 'Qwen/Qwen3.5-35B-A3B'
+- model: Qwen/Qwen3.5-35B-A3B
+  benchmark: INCLUDE
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 79.7
+  verbatim: '79.7'
+  locator: Benchmark Results › Language, group 'Multilingualism', row 'INCLUDE', column 'Qwen/Qwen3.5-35B-A3B'
+- model: Qwen/Qwen3.5-35B-A3B
+  benchmark: LiveCodeBench v6
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 74.6
+  verbatim: '74.6'
+  locator: Benchmark Results › Language, group 'Coding', row 'LiveCodeBench v6', column 'Qwen/Qwen3.5-35B-A3B'
+- model: Qwen/Qwen3.5-35B-A3B
+  benchmark: LongBench v2
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 59.0
+  verbatim: '59.0'
+  locator: Benchmark Results › Language, group 'Long Context', row 'LongBench v2', column 'Qwen/Qwen3.5-35B-A3B'
+- model: Qwen/Qwen3.5-35B-A3B
+  benchmark: MAXIFE
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 86.6
+  verbatim: '86.6'
+  locator: Benchmark Results › Language, group 'Multilingualism', row 'MAXIFE', column 'Qwen/Qwen3.5-35B-A3B'
+- model: Qwen/Qwen3.5-35B-A3B
+  benchmark: MMLU-Pro
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 85.3
+  verbatim: '85.3'
+  locator: Benchmark Results › Language, group 'Knowledge', row 'MMLU-Pro', column 'Qwen/Qwen3.5-35B-A3B'
+- model: Qwen/Qwen3.5-35B-A3B
+  benchmark: MMLU-ProX
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 81.0
+  verbatim: '81.0'
+  locator: Benchmark Results › Language, group 'Multilingualism', row 'MMLU-ProX', column 'Qwen/Qwen3.5-35B-A3B'
+- model: Qwen/Qwen3.5-35B-A3B
+  benchmark: MMLU-Redux
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 93.3
+  verbatim: '93.3'
+  locator: Benchmark Results › Language, group 'Knowledge', row 'MMLU-Redux', column 'Qwen/Qwen3.5-35B-A3B'
+- model: Qwen/Qwen3.5-35B-A3B
+  benchmark: MMMLU
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 85.2
+  verbatim: '85.2'
+  locator: Benchmark Results › Language, group 'Multilingualism', row 'MMMLU', column 'Qwen/Qwen3.5-35B-A3B'
+- model: Qwen/Qwen3.5-35B-A3B
+  benchmark: MultiChallenge
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 60.0
+  verbatim: '60.0'
+  locator: Benchmark Results › Language, group 'Instruction Following', row 'MultiChallenge', column 'Qwen/Qwen3.5-35B-A3B'
+- model: Qwen/Qwen3.5-35B-A3B
+  benchmark: NOVA-63
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 57.1
+  verbatim: '57.1'
+  locator: Benchmark Results › Language, group 'Multilingualism', row 'NOVA-63', column 'Qwen/Qwen3.5-35B-A3B'
+- model: Qwen/Qwen3.5-35B-A3B
+  benchmark: OJBench
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 36.0
+  verbatim: '36.0'
+  locator: Benchmark Results › Language, group 'Coding', row 'OJBench', column 'Qwen/Qwen3.5-35B-A3B'
+- model: Qwen/Qwen3.5-35B-A3B
+  benchmark: PolyMATH
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 64.4
+  verbatim: '64.4'
+  locator: Benchmark Results › Language, group 'Multilingualism', row 'PolyMATH', column 'Qwen/Qwen3.5-35B-A3B'
+- model: Qwen/Qwen3.5-35B-A3B
+  benchmark: SWE-bench Verified
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 69.2
+  verbatim: '69.2'
+  locator: Benchmark Results › Language, group 'Coding', row 'SWE-bench Verified', column 'Qwen/Qwen3.5-35B-A3B'
+- model: Qwen/Qwen3.5-35B-A3B
+  benchmark: Seal-0
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 41.4
+  verbatim: '41.4'
+  locator: Benchmark Results › Language, group 'Search Agent', row 'Seal-0', column 'Qwen/Qwen3.5-35B-A3B'
+- model: Qwen/Qwen3.5-35B-A3B
+  benchmark: SuperGPQA
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 63.4
+  verbatim: '63.4'
+  locator: Benchmark Results › Language, group 'Knowledge', row 'SuperGPQA', column 'Qwen/Qwen3.5-35B-A3B'
+- model: Qwen/Qwen3.5-35B-A3B
+  benchmark: TAU2-Bench
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 81.2
+  verbatim: '81.2'
+  locator: Benchmark Results › Language, group 'General Agent', row 'TAU2-Bench', column 'Qwen/Qwen3.5-35B-A3B'
+- model: Qwen/Qwen3.5-35B-A3B
+  benchmark: Terminal Bench 2
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 40.5
+  verbatim: '40.5'
+  locator: Benchmark Results › Language, group 'Coding', row 'Terminal Bench 2', column 'Qwen/Qwen3.5-35B-A3B'
+- model: Qwen/Qwen3.5-35B-A3B
+  benchmark: VITA-Bench
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 31.9
+  verbatim: '31.9'
+  locator: Benchmark Results › Language, group 'General Agent', row 'VITA-Bench', column 'Qwen/Qwen3.5-35B-A3B'
+- model: Qwen/Qwen3.5-35B-A3B
+  benchmark: WMT24++
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 76.3
+  verbatim: '76.3'
+  locator: Benchmark Results › Language, group 'Multilingualism', row 'WMT24++', column 'Qwen/Qwen3.5-35B-A3B'
+- model: Qwen/Qwen3.5-35B-A3B
+  benchmark: WideSearch
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 57.1
+  verbatim: '57.1'
+  locator: Benchmark Results › Language, group 'Search Agent', row 'WideSearch', column 'Qwen/Qwen3.5-35B-A3B'

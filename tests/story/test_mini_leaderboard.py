@@ -18,7 +18,9 @@ import yaml
 
 ROOT = Path(__file__).resolve().parents[2]
 MODELS = ["Qwen/Qwen2.5-7B-Instruct", "meta-llama/Llama-3.1-8B-Instruct", "google/gemma-2-9b-it"]
-COLUMNS = ["MMLU-Pro", "IFEval"]
+# the leaderboard's own columns, named by label: MMLU-Pro alone means one column per setting
+COLUMNS = ["MMLU-Pro · Open LLM Leaderboard v2 · 5-shot · acc",
+           "IFEval · Open LLM Leaderboard v2 · 0-shot · strict acc (prompt+inst mean)"]
 
 
 class Table(HTMLParser):
@@ -58,7 +60,7 @@ def _reviewed():
 def published(model, benchmark):
     """The witness's own reading: the verbatim raw value the source printed, as a percentage."""
     values = {round(float(c["verbatim"]) * 100, 1) for c in _reviewed()
-              if c["model"] == model and c["benchmark"] == benchmark}
+              if c["model"] == model and c["benchmark"] == benchmark.split(" · ")[0]}
     assert len(values) == 1, f"{model} {benchmark}: the source reports {values}"
     return values.pop()
 
@@ -78,7 +80,7 @@ def test_a_writer_builds_a_mini_leaderboard_that_cites_its_sources(tmp_path):
     header, *body = page.rows
     assert len(header) == 1 + len(COLUMNS), header
     for i, col in enumerate(COLUMNS, 1):
-        assert header[i][0].startswith(col), header
+        assert header[i][0] == col, header
     assert [r[0][0] for r in body] == MODELS
     for row in body:
         for i, col in enumerate(COLUMNS, 1):

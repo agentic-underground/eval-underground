@@ -16,7 +16,11 @@ import pytest
 import yaml
 
 ROOT = Path(__file__).resolve().parents[2]
-FAMILY, HIDE, SORT = "google", "GPQA", "MMLU-Pro"
+FAMILY = "google"
+# columns are named by their whole label: one benchmark appears under several settings
+HIDE = "GPQA · Open LLM Leaderboard v2 · 0-shot · acc_norm"
+SORT = "MMLU-Pro · Open LLM Leaderboard v2 · 5-shot · acc"
+SORT_BENCHMARK, SORT_PROTOCOL = "MMLU-Pro", "Open LLM Leaderboard v2"
 _LOADER = getattr(yaml, "CSafeLoader", yaml.SafeLoader)
 
 
@@ -54,10 +58,11 @@ def test_a_reader_narrows_the_matrix_to_one_family_and_sorts_it(page):
     source_url = _yaml("data/sources/open-llm-leaderboard-v2.yaml")["url"]
 
     # hide a benchmark
-    p.locator("fieldset label", has_text=HIDE).locator("input").uncheck()
+    before = visible_column_labels(p)
+    p.get_by_role("checkbox", name=HIDE, exact=True).uncheck()
     shown = visible_column_labels(p)
-    assert not any(h.startswith(HIDE) for h in shown), shown
-    assert len(shown) == 1 + 5, shown
+    assert HIDE in before and HIDE not in shown, shown
+    assert len(shown) == len(before) - 1, (len(before), len(shown))
 
     # one family
     p.select_option("#evu-family", FAMILY)
@@ -66,8 +71,8 @@ def test_a_reader_narrows_the_matrix_to_one_family_and_sorts_it(page):
     assert sorted(t.split("\t")[0].strip() for t in rows.all_inner_texts()) == family
 
     # sort by a benchmark: best first
-    p.locator("thead th:visible", has_text=SORT).click()
-    col = next(i for i, h in enumerate(visible_column_labels(p)) if h.startswith(SORT))
+    p.get_by_role("button", name=SORT, exact=True).click()
+    col = next(i for i, h in enumerate(visible_column_labels(p)) if h.rstrip(" ▼▲") == SORT)
     names = [r.locator("td:visible").nth(0).inner_text().strip() for r in rows.all()]
     # the number is the link's text; a disputed cell also carries a mark beside it
     shown_values = [(lambda a: a.inner_text().strip() if a.count() else "—")(r.locator("td:visible").nth(col).locator("a"))
@@ -77,7 +82,8 @@ def test_a_reader_narrows_the_matrix_to_one_family_and_sorts_it(page):
 
     published = {}
     for c in cells:
-        if c["benchmark"] == SORT and models[c["model"]]["family"] == FAMILY:
+        if (c["benchmark"], c["setting"]["protocol"]) == (SORT_BENCHMARK, SORT_PROTOCOL) \
+                and models[c["model"]]["family"] == FAMILY:
             published.setdefault(c["model"], []).append(c)
     best = max(published, key=lambda m: max(float(c["verbatim"]) for c in published[m]))
     assert names[0] == best, (names[:3], best)

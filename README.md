@@ -10,9 +10,13 @@ was read from**, with the exact row and column, and the verbatim value.
 ```console
 $ eval-underground mini \
     --model Qwen/Qwen2.5-7B-Instruct --model meta-llama/Llama-3.1-8B-Instruct --model google/gemma-2-9b-it \
-    --column MMLU-Pro --column IFEval --out post/
+    --column "MMLU-Pro · Open LLM Leaderboard v2 · 5-shot · acc" \
+    --column "IFEval · Open LLM Leaderboard v2 · 0-shot · strict acc (prompt+inst mean)" --out post/
 post/mini.html   post/mini.md   post/mini.csv   post/mini.json
 ```
+
+A column is one benchmark under one setting, so `--column MMLU-Pro` alone is refused when MMLU-Pro
+has been published under several settings; the refusal lists each column's label to choose from.
 
 | model | MMLU-Pro · Open LLM Leaderboard v2 · 5-shot · acc | IFEval · Open LLM Leaderboard v2 · 0-shot · strict acc (prompt+inst mean) |
 |---|---:|---:|
@@ -61,6 +65,15 @@ does not match its record.
 | source | what is taken |
 |---|---|
 | [Open LLM Leaderboard v2 archive](https://huggingface.co/datasets/open-llm-leaderboard/contents) (Hugging Face, revision `9c09a7c`) | rows marked *Official Providers* — each family's own releases, not community fine-tunes — and the six raw scores as percentages. Shots and metrics are the leaderboard's own statement of them, on its [About page](https://huggingface.co/docs/leaderboards/open_llm_leaderboard/about) |
+
+| Qwen3.5 model cards (Qwen, Hugging Face), one record per card at a pinned revision: 0.8B, 2B, 4B, 9B, 27B, 35B-A3B, 122B-A10B, 397B-A17B | the *Language* benchmark table's Qwen3.5 columns. The mode (thinking / non-thinking) is recorded only where the table states it, so a card that does not say gets its own column rather than a guess |
+
+**A score read from prose or a table is read twice, blind.** One reading parses the table
+([`scripts/read_card_tables.py`](scripts/read_card_tables.py)); the other is made by eye by a reader
+who has not seen the first. Both are kept in `data/extractions/<source>/`. `eval-underground agree
+<source>` admits only the cells where the two match; anything else waits in `data/held/` for a person,
+and never reaches the matrix. Parameter counts are Hugging Face's own (the safetensors total, which
+for a vision-language model includes its vision tower).
 
 The leaderboard archive's scores belong to its publishers; eval-underground re-presents them with
 attribution and links back to every one.

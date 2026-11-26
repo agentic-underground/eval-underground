@@ -749,6 +749,46 @@ models:
   params_b: 7.0
   kind: instruct
   released: '2024-09-19'
+- id: Qwen/Qwen3.5-0.8B
+  family: Qwen
+  params_b: 0.873
+  kind: instruct
+  released: '2026-02-28'
+- id: Qwen/Qwen3.5-122B-A10B
+  family: Qwen
+  params_b: 125.086
+  kind: instruct
+  released: '2026-02-24'
+- id: Qwen/Qwen3.5-27B
+  family: Qwen
+  params_b: 27.781
+  kind: instruct
+  released: '2026-02-24'
+- id: Qwen/Qwen3.5-2B
+  family: Qwen
+  params_b: 2.274
+  kind: instruct
+  released: '2026-02-28'
+- id: Qwen/Qwen3.5-35B-A3B
+  family: Qwen
+  params_b: 35.952
+  kind: instruct
+  released: '2026-02-24'
+- id: Qwen/Qwen3.5-397B-A17B
+  family: Qwen
+  params_b: 403.398
+  kind: instruct
+  released: '2026-02-16'
+- id: Qwen/Qwen3.5-4B
+  family: Qwen
+  params_b: 4.66
+  kind: instruct
+  released: '2026-02-27'
+- id: Qwen/Qwen3.5-9B
+  family: Qwen
+  params_b: 9.653
+  kind: instruct
+  released: '2026-02-27'
 - id: Salesforce/LLaMA-3-8B-SFR-Iterative-DPO-R
   family: Salesforce
   params_b: 8.03

@@ -1,0 +1,54 @@
+source: hf-card-qwen3.5-9b
+cells:
+- {model: 'Qwen/Qwen3.5-9B', benchmark: 'MMLU-Pro', mode: unstated, value: 82.5, verbatim: '82.5', group: 'Knowledge & STEM'}
+- {model: 'Qwen/Qwen3.5-4B', benchmark: 'MMLU-Pro', mode: unstated, value: 79.1, verbatim: '79.1', group: 'Knowledge & STEM'}
+- {model: 'Qwen/Qwen3.5-9B', benchmark: 'MMLU-Redux', mode: unstated, value: 91.1, verbatim: '91.1', group: 'Knowledge & STEM'}
+- {model: 'Qwen/Qwen3.5-4B', benchmark: 'MMLU-Redux', mode: unstated, value: 88.8, verbatim: '88.8', group: 'Knowledge & STEM'}
+- {model: 'Qwen/Qwen3.5-9B', benchmark: 'C-Eval', mode: unstated, value: 88.2, verbatim: '88.2', group: 'Knowledge & STEM'}
+- {model: 'Qwen/Qwen3.5-4B', benchmark: 'C-Eval', mode: unstated, value: 85.1, verbatim: '85.1', group: 'Knowledge & STEM'}
+- {model: 'Qwen/Qwen3.5-9B', benchmark: 'SuperGPQA', mode: unstated, value: 58.2, verbatim: '58.2', group: 'Knowledge & STEM'}
+- {model: 'Qwen/Qwen3.5-4B', benchmark: 'SuperGPQA', mode: unstated, value: 52.9, verbatim: '52.9', group: 'Knowledge & STEM'}
+- {model: 'Qwen/Qwen3.5-9B', benchmark: 'GPQA Diamond', mode: unstated, value: 81.7, verbatim: '81.7', group: 'Knowledge & STEM'}
+- {model: 'Qwen/Qwen3.5-4B', benchmark: 'GPQA Diamond', mode: unstated, value: 76.2, verbatim: '76.2', group: 'Knowledge & STEM'}
+- {model: 'Qwen/Qwen3.5-9B', benchmark: 'IFEval', mode: unstated, value: 91.5, verbatim: '91.5', group: 'Instruction Following'}
+- {model: 'Qwen/Qwen3.5-4B', benchmark: 'IFEval', mode: unstated, value: 89.8, verbatim: '89.8', group: 'Instruction Following'}
+- {model: 'Qwen/Qwen3.5-9B', benchmark: 'IFBench', mode: unstated, value: 64.5, verbatim: '64.5', group: 'Instruction Following'}
+- {model: 'Qwen/Qwen3.5-4B', benchmark: 'IFBench', mode: unstated, value: 59.2, verbatim: '59.2', group: 'Instruction Following'}
+- {model: 'Qwen/Qwen3.5-9B', benchmark: 'MultiChallenge', mode: unstated, value: 54.5, verbatim: '54.5', group: 'Instruction Following'}
+- {model: 'Qwen/Qwen3.5-4B', benchmark: 'MultiChallenge', mode: unstated, value: 49.0, verbatim: '49.0', group: 'Instruction Following'}
+- {model: 'Qwen/Qwen3.5-9B', benchmark: 'AA-LCR', mode: unstated, value: 63.0, verbatim: '63.0', group: 'Long Context'}
+- {model: 'Qwen/Qwen3.5-4B', benchmark: 'AA-LCR', mode: unstated, value: 57.0, verbatim: '57.0', group: 'Long Context'}
+- {model: 'Qwen/Qwen3.5-9B', benchmark: 'LongBench v2', mode: unstated, value: 55.2, verbatim: '55.2', group: 'Long Context'}
+- {model: 'Qwen/Qwen3.5-4B', benchmark: 'LongBench v2', mode: unstated, value: 50.0, verbatim: '50.0', group: 'Long Context'}
+- {model: 'Qwen/Qwen3.5-9B', benchmark: 'HMMT Feb 25', mode: unstated, value: 83.2, verbatim: '83.2', group: 'Reasoning & Coding'}
+- {model: 'Qwen/Qwen3.5-4B', benchmark: 'HMMT Feb 25', mode: unstated, value: 74.0, verbatim: '74.0', group: 'Reasoning & Coding'}
+- {model: 'Qwen/Qwen3.5-9B', benchmark: 'HMMT Nov 25', mode: unstated, value: 82.9, verbatim: '82.9', group: 'Reasoning & Coding'}
+- {model: 'Qwen/Qwen3.5-4B', benchmark: 'HMMT Nov 25', mode: unstated, value: 76.8, verbatim: '76.8', group: 'Reasoning & Coding'}
+- {model: 'Qwen/Qwen3.5-9B', benchmark: 'LiveCodeBench v6', mode: unstated, value: 65.6, verbatim: '65.6', group: 'Reasoning & Coding'}
+- {model: 'Qwen/Qwen3.5-4B', benchmark: 'LiveCodeBench v6', mode: unstated, value: 55.8, verbatim: '55.8', group: 'Reasoning & Coding'}
+- {model: 'Qwen/Qwen3.5-9B', benchmark: 'OJBench', mode: unstated, value: 29.2, verbatim: '29.2', group: 'Reasoning & Coding'}
+- {model: 'Qwen/Qwen3.5-4B', benchmark: 'OJBench', mode: unstated, value: 24.1, verbatim: '24.1', group: 'Reasoning & Coding'}
+- {model: 'Qwen/Qwen3.5-9B', benchmark: 'BFCL-V4', mode: unstated, value: 66.1, verbatim: '66.1', group: 'General Agent'}
+- {model: 'Qwen/Qwen3.5-4B', benchmark: 'BFCL-V4', mode: unstated, value: 50.3, verbatim: '50.3', group: 'General Agent'}
+- {model: 'Qwen/Qwen3.5-9B', benchmark: 'TAU2-Bench', mode: unstated, value: 79.1, verbatim: '79.1', group: 'General Agent'}
+- {model: 'Qwen/Qwen3.5-4B', benchmark: 'TAU2-Bench', mode: unstated, value: 79.9, verbatim: '79.9', group: 'General Agent'}
+- {model: 'Qwen/Qwen3.5-9B', benchmark: 'VITA-Bench', mode: unstated, value: 29.8, verbatim: '29.8', group: 'General Agent'}
+- {model: 'Qwen/Qwen3.5-4B', benchmark: 'VITA-Bench', mode: unstated, value: 22.0, verbatim: '22.0', group: 'General Agent'}
+- {model: 'Qwen/Qwen3.5-9B', benchmark: 'DeepPlanning', mode: unstated, value: 18.0, verbatim: '18.0', group: 'General Agent'}
+- {model: 'Qwen/Qwen3.5-4B', benchmark: 'DeepPlanning', mode: unstated, value: 17.6, verbatim: '17.6', group: 'General Agent'}
+- {model: 'Qwen/Qwen3.5-9B', benchmark: 'MMMLU', mode: unstated, value: 81.2, verbatim: '81.2', group: 'Multilingualism'}
+- {model: 'Qwen/Qwen3.5-4B', benchmark: 'MMMLU', mode: unstated, value: 76.1, verbatim: '76.1', group: 'Multilingualism'}
+- {model: 'Qwen/Qwen3.5-9B', benchmark: 'MMLU-ProX', mode: unstated, value: 76.3, verbatim: '76.3', group: 'Multilingualism'}
+- {model: 'Qwen/Qwen3.5-4B', benchmark: 'MMLU-ProX', mode: unstated, value: 71.5, verbatim: '71.5', group: 'Multilingualism'}
+- {model: 'Qwen/Qwen3.5-9B', benchmark: 'NOVA-63', mode: unstated, value: 55.9, verbatim: '55.9', group: 'Multilingualism'}
+- {model: 'Qwen/Qwen3.5-4B', benchmark: 'NOVA-63', mode: unstated, value: 54.3, verbatim: '54.3', group: 'Multilingualism'}
+- {model: 'Qwen/Qwen3.5-9B', benchmark: 'INCLUDE', mode: unstated, value: 75.6, verbatim: '75.6', group: 'Multilingualism'}
+- {model: 'Qwen/Qwen3.5-4B', benchmark: 'INCLUDE', mode: unstated, value: 71.0, verbatim: '71.0', group: 'Multilingualism'}
+- {model: 'Qwen/Qwen3.5-9B', benchmark: 'Global PIQA', mode: unstated, value: 83.2, verbatim: '83.2', group: 'Multilingualism'}
+- {model: 'Qwen/Qwen3.5-4B', benchmark: 'Global PIQA', mode: unstated, value: 78.9, verbatim: '78.9', group: 'Multilingualism'}
+- {model: 'Qwen/Qwen3.5-9B', benchmark: 'PolyMATH', mode: unstated, value: 57.3, verbatim: '57.3', group: 'Multilingualism'}
+- {model: 'Qwen/Qwen3.5-4B', benchmark: 'PolyMATH', mode: unstated, value: 51.1, verbatim: '51.1', group: 'Multilingualism'}
+- {model: 'Qwen/Qwen3.5-9B', benchmark: 'WMT24++', mode: unstated, value: 72.6, verbatim: '72.6', group: 'Multilingualism'}
+- {model: 'Qwen/Qwen3.5-4B', benchmark: 'WMT24++', mode: unstated, value: 66.6, verbatim: '66.6', group: 'Multilingualism'}
+- {model: 'Qwen/Qwen3.5-9B', benchmark: 'MAXIFE', mode: unstated, value: 83.4, verbatim: '83.4', group: 'Multilingualism'}
+- {model: 'Qwen/Qwen3.5-4B', benchmark: 'MAXIFE', mode: unstated, value: 78.0, verbatim: '78.0', group: 'Multilingualism'}

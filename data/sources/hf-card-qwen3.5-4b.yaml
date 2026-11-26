@@ -1,0 +1,11 @@
+id: hf-card-qwen3.5-4b
+kind: model_card
+model: Qwen/Qwen3.5-4B
+title: Qwen3.5-4B model card (Qwen, Hugging Face)
+url: https://huggingface.co/Qwen/Qwen3.5-4B/resolve/851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a/README.md
+revision: 851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a
+retrieved: '2026-11-26'
+sha256: 1406be1b6b8fd8a6545870da516912804756593628a1d0fb0a7965211e82a7bb
+protocol: Qwen3.5 model card
+table: Benchmark Results › Language
+taken: the Language table's Qwen3.5 columns; the mode only where the table states it

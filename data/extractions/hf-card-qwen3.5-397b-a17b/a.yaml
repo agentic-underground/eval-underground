@@ -1,0 +1,236 @@
+source: hf-card-qwen3.5-397b-a17b
+cells:
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: MMLU-Pro
+  mode: unstated
+  value: 87.8
+  verbatim: '87.8'
+  group: Knowledge
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: MMLU-Redux
+  mode: unstated
+  value: 94.9
+  verbatim: '94.9'
+  group: Knowledge
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: SuperGPQA
+  mode: unstated
+  value: 70.4
+  verbatim: '70.4'
+  group: Knowledge
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: C-Eval
+  mode: unstated
+  value: 93.0
+  verbatim: '93.0'
+  group: Knowledge
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: IFEval
+  mode: unstated
+  value: 92.6
+  verbatim: '92.6'
+  group: Instruction Following
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: IFBench
+  mode: unstated
+  value: 76.5
+  verbatim: '76.5'
+  group: Instruction Following
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: MultiChallenge
+  mode: unstated
+  value: 67.6
+  verbatim: '67.6'
+  group: Instruction Following
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: AA-LCR
+  mode: unstated
+  value: 68.7
+  verbatim: '68.7'
+  group: Long Context
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: LongBench v2
+  mode: unstated
+  value: 63.2
+  verbatim: '63.2'
+  group: Long Context
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: GPQA
+  mode: unstated
+  value: 88.4
+  verbatim: '88.4'
+  group: STEM
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: HLE
+  mode: unstated
+  value: 28.7
+  verbatim: '28.7'
+  group: STEM
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: HLE-Verified¹
+  mode: unstated
+  value: 37.6
+  verbatim: '37.6'
+  group: STEM
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: LiveCodeBench v6
+  mode: unstated
+  value: 83.6
+  verbatim: '83.6'
+  group: Reasoning
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: HMMT Feb 25
+  mode: unstated
+  value: 94.8
+  verbatim: '94.8'
+  group: Reasoning
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: HMMT Nov 25
+  mode: unstated
+  value: 92.7
+  verbatim: '92.7'
+  group: Reasoning
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: IMOAnswerBench
+  mode: unstated
+  value: 80.9
+  verbatim: '80.9'
+  group: Reasoning
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: AIME26
+  mode: unstated
+  value: 91.3
+  verbatim: '91.3'
+  group: Reasoning
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: BFCL-V4
+  mode: unstated
+  value: 72.9
+  verbatim: '72.9'
+  group: General Agent
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: TAU2-Bench
+  mode: unstated
+  value: 86.7
+  verbatim: '86.7'
+  group: General Agent
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: VITA-Bench
+  mode: unstated
+  value: 49.7
+  verbatim: '49.7'
+  group: General Agent
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: DeepPlanning
+  mode: unstated
+  value: 34.3
+  verbatim: '34.3'
+  group: General Agent
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: Tool Decathlon
+  mode: unstated
+  value: 38.3
+  verbatim: '38.3'
+  group: General Agent
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: MCP-Mark
+  mode: unstated
+  value: 46.1
+  verbatim: '46.1'
+  group: General Agent
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: HLE w/ tool
+  mode: unstated
+  value: 48.3
+  verbatim: '48.3'
+  group: Search Agent³
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: BrowseComp-zh
+  mode: unstated
+  value: 70.3
+  verbatim: '70.3'
+  group: Search Agent³
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: WideSearch
+  mode: unstated
+  value: 74.0
+  verbatim: '74.0'
+  group: Search Agent³
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: Seal-0
+  mode: unstated
+  value: 46.9
+  verbatim: '46.9'
+  group: Search Agent³
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: MMMLU
+  mode: unstated
+  value: 88.5
+  verbatim: '88.5'
+  group: Multilingualism
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: MMLU-ProX
+  mode: unstated
+  value: 84.7
+  verbatim: '84.7'
+  group: Multilingualism
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: NOVA-63
+  mode: unstated
+  value: 59.1
+  verbatim: '59.1'
+  group: Multilingualism
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: INCLUDE
+  mode: unstated
+  value: 85.6
+  verbatim: '85.6'
+  group: Multilingualism
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: Global PIQA
+  mode: unstated
+  value: 89.8
+  verbatim: '89.8'
+  group: Multilingualism
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: PolyMATH
+  mode: unstated
+  value: 73.3
+  verbatim: '73.3'
+  group: Multilingualism
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: WMT24++
+  mode: unstated
+  value: 78.9
+  verbatim: '78.9'
+  group: Multilingualism
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: MAXIFE
+  mode: unstated
+  value: 88.2
+  verbatim: '88.2'
+  group: Multilingualism
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: SWE-bench Verified
+  mode: unstated
+  value: 76.4
+  verbatim: '76.4'
+  group: Coding Agent
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: SWE-bench Multilingual
+  mode: unstated
+  value: 69.3
+  verbatim: '69.3'
+  group: Coding Agent
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: SecCodeBench
+  mode: unstated
+  value: 68.3
+  verbatim: '68.3'
+  group: Coding Agent
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: Terminal Bench 2
+  mode: unstated
+  value: 52.5
+  verbatim: '52.5'
+  group: Coding Agent

@@ -1,0 +1,314 @@
+source: hf-card-qwen3.5-397b-a17b
+cells:
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: AA-LCR
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 68.7
+  verbatim: '68.7'
+  locator: Benchmark Results › Language, group 'Long Context', row 'AA-LCR', column 'Qwen/Qwen3.5-397B-A17B'
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: AIME26
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 91.3
+  verbatim: '91.3'
+  locator: Benchmark Results › Language, group 'Reasoning', row 'AIME26', column 'Qwen/Qwen3.5-397B-A17B'
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: BFCL-V4
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 72.9
+  verbatim: '72.9'
+  locator: Benchmark Results › Language, group 'General Agent', row 'BFCL-V4', column 'Qwen/Qwen3.5-397B-A17B'
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: BrowseComp-zh
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 70.3
+  verbatim: '70.3'
+  locator: Benchmark Results › Language, group 'Search Agent³', row 'BrowseComp-zh', column 'Qwen/Qwen3.5-397B-A17B'
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: C-Eval
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 93.0
+  verbatim: '93.0'
+  locator: Benchmark Results › Language, group 'Knowledge', row 'C-Eval', column 'Qwen/Qwen3.5-397B-A17B'
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: DeepPlanning
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 34.3
+  verbatim: '34.3'
+  locator: Benchmark Results › Language, group 'General Agent', row 'DeepPlanning', column 'Qwen/Qwen3.5-397B-A17B'
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: GPQA
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 88.4
+  verbatim: '88.4'
+  locator: Benchmark Results › Language, group 'STEM', row 'GPQA', column 'Qwen/Qwen3.5-397B-A17B'
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: Global PIQA
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 89.8
+  verbatim: '89.8'
+  locator: Benchmark Results › Language, group 'Multilingualism', row 'Global PIQA', column 'Qwen/Qwen3.5-397B-A17B'
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: HLE
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 28.7
+  verbatim: '28.7'
+  locator: Benchmark Results › Language, group 'STEM', row 'HLE', column 'Qwen/Qwen3.5-397B-A17B'
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: HLE w/ tool
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 48.3
+  verbatim: '48.3'
+  locator: Benchmark Results › Language, group 'Search Agent³', row 'HLE w/ tool', column 'Qwen/Qwen3.5-397B-A17B'
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: HLE-Verified¹
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 37.6
+  verbatim: '37.6'
+  locator: Benchmark Results › Language, group 'STEM', row 'HLE-Verified¹', column 'Qwen/Qwen3.5-397B-A17B'
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: HMMT Feb 25
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 94.8
+  verbatim: '94.8'
+  locator: Benchmark Results › Language, group 'Reasoning', row 'HMMT Feb 25', column 'Qwen/Qwen3.5-397B-A17B'
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: HMMT Nov 25
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 92.7
+  verbatim: '92.7'
+  locator: Benchmark Results › Language, group 'Reasoning', row 'HMMT Nov 25', column 'Qwen/Qwen3.5-397B-A17B'
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: IFBench
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 76.5
+  verbatim: '76.5'
+  locator: Benchmark Results › Language, group 'Instruction Following', row 'IFBench', column 'Qwen/Qwen3.5-397B-A17B'
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: IFEval
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 92.6
+  verbatim: '92.6'
+  locator: Benchmark Results › Language, group 'Instruction Following', row 'IFEval', column 'Qwen/Qwen3.5-397B-A17B'
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: IMOAnswerBench
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 80.9
+  verbatim: '80.9'
+  locator: Benchmark Results › Language, group 'Reasoning', row 'IMOAnswerBench', column 'Qwen/Qwen3.5-397B-A17B'
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: INCLUDE
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 85.6
+  verbatim: '85.6'
+  locator: Benchmark Results › Language, group 'Multilingualism', row 'INCLUDE', column 'Qwen/Qwen3.5-397B-A17B'
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: LiveCodeBench v6
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 83.6
+  verbatim: '83.6'
+  locator: Benchmark Results › Language, group 'Reasoning', row 'LiveCodeBench v6', column 'Qwen/Qwen3.5-397B-A17B'
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: LongBench v2
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 63.2
+  verbatim: '63.2'
+  locator: Benchmark Results › Language, group 'Long Context', row 'LongBench v2', column 'Qwen/Qwen3.5-397B-A17B'
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: MAXIFE
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 88.2
+  verbatim: '88.2'
+  locator: Benchmark Results › Language, group 'Multilingualism', row 'MAXIFE', column 'Qwen/Qwen3.5-397B-A17B'
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: MCP-Mark
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 46.1
+  verbatim: '46.1'
+  locator: Benchmark Results › Language, group 'General Agent', row 'MCP-Mark', column 'Qwen/Qwen3.5-397B-A17B'
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: MMLU-Pro
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 87.8
+  verbatim: '87.8'
+  locator: Benchmark Results › Language, group 'Knowledge', row 'MMLU-Pro', column 'Qwen/Qwen3.5-397B-A17B'
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: MMLU-ProX
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 84.7
+  verbatim: '84.7'
+  locator: Benchmark Results › Language, group 'Multilingualism', row 'MMLU-ProX', column 'Qwen/Qwen3.5-397B-A17B'
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: MMLU-Redux
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 94.9
+  verbatim: '94.9'
+  locator: Benchmark Results › Language, group 'Knowledge', row 'MMLU-Redux', column 'Qwen/Qwen3.5-397B-A17B'
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: MMMLU
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 88.5
+  verbatim: '88.5'
+  locator: Benchmark Results › Language, group 'Multilingualism', row 'MMMLU', column 'Qwen/Qwen3.5-397B-A17B'
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: MultiChallenge
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 67.6
+  verbatim: '67.6'
+  locator: Benchmark Results › Language, group 'Instruction Following', row 'MultiChallenge', column 'Qwen/Qwen3.5-397B-A17B'
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: NOVA-63
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 59.1
+  verbatim: '59.1'
+  locator: Benchmark Results › Language, group 'Multilingualism', row 'NOVA-63', column 'Qwen/Qwen3.5-397B-A17B'
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: PolyMATH
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 73.3
+  verbatim: '73.3'
+  locator: Benchmark Results › Language, group 'Multilingualism', row 'PolyMATH', column 'Qwen/Qwen3.5-397B-A17B'
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: SWE-bench Multilingual
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 69.3
+  verbatim: '69.3'
+  locator: Benchmark Results › Language, group 'Coding Agent', row 'SWE-bench Multilingual', column 'Qwen/Qwen3.5-397B-A17B'
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: SWE-bench Verified
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 76.4
+  verbatim: '76.4'
+  locator: Benchmark Results › Language, group 'Coding Agent', row 'SWE-bench Verified', column 'Qwen/Qwen3.5-397B-A17B'
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: Seal-0
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 46.9
+  verbatim: '46.9'
+  locator: Benchmark Results › Language, group 'Search Agent³', row 'Seal-0', column 'Qwen/Qwen3.5-397B-A17B'
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: SecCodeBench
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 68.3
+  verbatim: '68.3'
+  locator: Benchmark Results › Language, group 'Coding Agent', row 'SecCodeBench', column 'Qwen/Qwen3.5-397B-A17B'
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: SuperGPQA
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 70.4
+  verbatim: '70.4'
+  locator: Benchmark Results › Language, group 'Knowledge', row 'SuperGPQA', column 'Qwen/Qwen3.5-397B-A17B'
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: TAU2-Bench
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 86.7
+  verbatim: '86.7'
+  locator: Benchmark Results › Language, group 'General Agent', row 'TAU2-Bench', column 'Qwen/Qwen3.5-397B-A17B'
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: Terminal Bench 2
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 52.5
+  verbatim: '52.5'
+  locator: Benchmark Results › Language, group 'Coding Agent', row 'Terminal Bench 2', column 'Qwen/Qwen3.5-397B-A17B'
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: Tool Decathlon
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 38.3
+  verbatim: '38.3'
+  locator: Benchmark Results › Language, group 'General Agent', row 'Tool Decathlon', column 'Qwen/Qwen3.5-397B-A17B'
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: VITA-Bench
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 49.7
+  verbatim: '49.7'
+  locator: Benchmark Results › Language, group 'General Agent', row 'VITA-Bench', column 'Qwen/Qwen3.5-397B-A17B'
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: WMT24++
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 78.9
+  verbatim: '78.9'
+  locator: Benchmark Results › Language, group 'Multilingualism', row 'WMT24++', column 'Qwen/Qwen3.5-397B-A17B'
+- model: Qwen/Qwen3.5-397B-A17B
+  benchmark: WideSearch
+  setting:
+    protocol: Qwen3.5 model card
+    mode: unstated
+  value: 74.0
+  verbatim: '74.0'
+  locator: Benchmark Results › Language, group 'Search Agent³', row 'WideSearch', column 'Qwen/Qwen3.5-397B-A17B'

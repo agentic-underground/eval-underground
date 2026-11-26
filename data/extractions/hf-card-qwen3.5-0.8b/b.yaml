@@ -1,0 +1,56 @@
+source: hf-card-qwen3.5-0.8b
+cells:
+- {model: 'Qwen/Qwen3.5-2B', benchmark: 'MMLU-Pro', mode: non-thinking, value: 55.3, verbatim: '55.3', group: 'Non-Thinking Mode'}
+- {model: 'Qwen/Qwen3.5-0.8B', benchmark: 'MMLU-Pro', mode: non-thinking, value: 29.7, verbatim: '29.7', group: 'Non-Thinking Mode'}
+- {model: 'Qwen/Qwen3.5-2B', benchmark: 'MMLU-Redux', mode: non-thinking, value: 69.2, verbatim: '69.2', group: 'Non-Thinking Mode'}
+- {model: 'Qwen/Qwen3.5-0.8B', benchmark: 'MMLU-Redux', mode: non-thinking, value: 48.5, verbatim: '48.5', group: 'Non-Thinking Mode'}
+- {model: 'Qwen/Qwen3.5-2B', benchmark: 'C-Eval', mode: non-thinking, value: 65.2, verbatim: '65.2', group: 'Non-Thinking Mode'}
+- {model: 'Qwen/Qwen3.5-0.8B', benchmark: 'C-Eval', mode: non-thinking, value: 46.4, verbatim: '46.4', group: 'Non-Thinking Mode'}
+- {model: 'Qwen/Qwen3.5-2B', benchmark: 'SuperGPQA', mode: non-thinking, value: 30.4, verbatim: '30.4', group: 'Non-Thinking Mode'}
+- {model: 'Qwen/Qwen3.5-0.8B', benchmark: 'SuperGPQA', mode: non-thinking, value: 16.9, verbatim: '16.9', group: 'Non-Thinking Mode'}
+- {model: 'Qwen/Qwen3.5-2B', benchmark: 'IFEval', mode: non-thinking, value: 61.2, verbatim: '61.2', group: 'Non-Thinking Mode'}
+- {model: 'Qwen/Qwen3.5-0.8B', benchmark: 'IFEval', mode: non-thinking, value: 52.1, verbatim: '52.1', group: 'Non-Thinking Mode'}
+- {model: 'Qwen/Qwen3.5-2B', benchmark: 'MMMLU', mode: non-thinking, value: 56.9, verbatim: '56.9', group: 'Non-Thinking Mode'}
+- {model: 'Qwen/Qwen3.5-0.8B', benchmark: 'MMMLU', mode: non-thinking, value: 34.1, verbatim: '34.1', group: 'Non-Thinking Mode'}
+- {model: 'Qwen/Qwen3.5-2B', benchmark: 'MMLU-Pro', mode: thinking, value: 66.5, verbatim: '66.5', group: 'Knowledge & STEM (Thinking)'}
+- {model: 'Qwen/Qwen3.5-0.8B', benchmark: 'MMLU-Pro', mode: thinking, value: 42.3, verbatim: '42.3', group: 'Knowledge & STEM (Thinking)'}
+- {model: 'Qwen/Qwen3.5-2B', benchmark: 'MMLU-Redux', mode: thinking, value: 79.6, verbatim: '79.6', group: 'Knowledge & STEM (Thinking)'}
+- {model: 'Qwen/Qwen3.5-0.8B', benchmark: 'MMLU-Redux', mode: thinking, value: 59.5, verbatim: '59.5', group: 'Knowledge & STEM (Thinking)'}
+- {model: 'Qwen/Qwen3.5-2B', benchmark: 'C-Eval', mode: thinking, value: 73.2, verbatim: '73.2', group: 'Knowledge & STEM (Thinking)'}
+- {model: 'Qwen/Qwen3.5-0.8B', benchmark: 'C-Eval', mode: thinking, value: 50.5, verbatim: '50.5', group: 'Knowledge & STEM (Thinking)'}
+- {model: 'Qwen/Qwen3.5-2B', benchmark: 'SuperGPQA', mode: thinking, value: 37.5, verbatim: '37.5', group: 'Knowledge & STEM (Thinking)'}
+- {model: 'Qwen/Qwen3.5-0.8B', benchmark: 'SuperGPQA', mode: thinking, value: 21.3, verbatim: '21.3', group: 'Knowledge & STEM (Thinking)'}
+- {model: 'Qwen/Qwen3.5-2B', benchmark: 'GPQA', mode: thinking, value: 51.6, verbatim: '51.6', group: 'Knowledge & STEM (Thinking)'}
+- {model: 'Qwen/Qwen3.5-0.8B', benchmark: 'GPQA', mode: thinking, value: 11.9, verbatim: '11.9', group: 'Knowledge & STEM (Thinking)'}
+- {model: 'Qwen/Qwen3.5-2B', benchmark: 'IFEval', mode: thinking, value: 78.6, verbatim: '78.6', group: 'Instruction Following  (Thinking）'}
+- {model: 'Qwen/Qwen3.5-0.8B', benchmark: 'IFEval', mode: thinking, value: 44.0, verbatim: '44.0', group: 'Instruction Following  (Thinking）'}
+- {model: 'Qwen/Qwen3.5-2B', benchmark: 'IFBench', mode: thinking, value: 41.3, verbatim: '41.3', group: 'Instruction Following  (Thinking）'}
+- {model: 'Qwen/Qwen3.5-0.8B', benchmark: 'IFBench', mode: thinking, value: 21.0, verbatim: '21.0', group: 'Instruction Following  (Thinking）'}
+- {model: 'Qwen/Qwen3.5-2B', benchmark: 'MultiChallenge', mode: thinking, value: 33.7, verbatim: '33.7', group: 'Instruction Following  (Thinking）'}
+- {model: 'Qwen/Qwen3.5-0.8B', benchmark: 'MultiChallenge', mode: thinking, value: 18.9, verbatim: '18.9', group: 'Instruction Following  (Thinking）'}
+- {model: 'Qwen/Qwen3.5-2B', benchmark: 'AA-LCR', mode: thinking, value: 25.6, verbatim: '25.6', group: 'Long Context (Thinking）'}
+- {model: 'Qwen/Qwen3.5-0.8B', benchmark: 'AA-LCR', mode: thinking, value: 4.7, verbatim: '4.7', group: 'Long Context (Thinking）'}
+- {model: 'Qwen/Qwen3.5-2B', benchmark: 'LongBench v2', mode: thinking, value: 38.7, verbatim: '38.7', group: 'Long Context (Thinking）'}
+- {model: 'Qwen/Qwen3.5-0.8B', benchmark: 'LongBench v2', mode: thinking, value: 26.1, verbatim: '26.1', group: 'Long Context (Thinking）'}
+- {model: 'Qwen/Qwen3.5-2B', benchmark: 'HMMT Feb 25', mode: thinking, value: 22.9, verbatim: '22.9', group: 'Reasoning (Thinking）'}
+- {model: 'Qwen/Qwen3.5-2B', benchmark: 'HMMT Nov 25', mode: thinking, value: 19.6, verbatim: '19.6', group: 'Reasoning (Thinking）'}
+- {model: 'Qwen/Qwen3.5-2B', benchmark: 'BFCL-V4', mode: thinking, value: 43.6, verbatim: '43.6', group: 'General Agent (Thinking）'}
+- {model: 'Qwen/Qwen3.5-0.8B', benchmark: 'BFCL-V4', mode: thinking, value: 25.3, verbatim: '25.3', group: 'General Agent (Thinking）'}
+- {model: 'Qwen/Qwen3.5-2B', benchmark: 'TAU2-Bench', mode: thinking, value: 48.8, verbatim: '48.8', group: 'General Agent (Thinking）'}
+- {model: 'Qwen/Qwen3.5-0.8B', benchmark: 'TAU2-Bench', mode: thinking, value: 11.6, verbatim: '11.6', group: 'General Agent (Thinking）'}
+- {model: 'Qwen/Qwen3.5-2B', benchmark: 'MMMLU', mode: thinking, value: 63.1, verbatim: '63.1', group: 'Multilingualism (Thinking）'}
+- {model: 'Qwen/Qwen3.5-0.8B', benchmark: 'MMMLU', mode: thinking, value: 44.3, verbatim: '44.3', group: 'Multilingualism (Thinking）'}
+- {model: 'Qwen/Qwen3.5-2B', benchmark: 'MMLU-ProX', mode: thinking, value: 52.3, verbatim: '52.3', group: 'Multilingualism (Thinking）'}
+- {model: 'Qwen/Qwen3.5-0.8B', benchmark: 'MMLU-ProX', mode: thinking, value: 34.6, verbatim: '34.6', group: 'Multilingualism (Thinking）'}
+- {model: 'Qwen/Qwen3.5-2B', benchmark: 'NOVA-63', mode: thinking, value: 46.4, verbatim: '46.4', group: 'Multilingualism (Thinking）'}
+- {model: 'Qwen/Qwen3.5-0.8B', benchmark: 'NOVA-63', mode: thinking, value: 42.4, verbatim: '42.4', group: 'Multilingualism (Thinking）'}
+- {model: 'Qwen/Qwen3.5-2B', benchmark: 'INCLUDE', mode: thinking, value: 55.4, verbatim: '55.4', group: 'Multilingualism (Thinking）'}
+- {model: 'Qwen/Qwen3.5-0.8B', benchmark: 'INCLUDE', mode: thinking, value: 40.6, verbatim: '40.6', group: 'Multilingualism (Thinking）'}
+- {model: 'Qwen/Qwen3.5-2B', benchmark: 'Global PIQA', mode: thinking, value: 69.3, verbatim: '69.3', group: 'Multilingualism (Thinking）'}
+- {model: 'Qwen/Qwen3.5-0.8B', benchmark: 'Global PIQA', mode: thinking, value: 59.4, verbatim: '59.4', group: 'Multilingualism (Thinking）'}
+- {model: 'Qwen/Qwen3.5-2B', benchmark: 'PolyMATH', mode: thinking, value: 26.1, verbatim: '26.1', group: 'Multilingualism (Thinking）'}
+- {model: 'Qwen/Qwen3.5-0.8B', benchmark: 'PolyMATH', mode: thinking, value: 8.2, verbatim: '8.2', group: 'Multilingualism (Thinking）'}
+- {model: 'Qwen/Qwen3.5-2B', benchmark: 'WMT24++', mode: thinking, value: 45.8, verbatim: '45.8', group: 'Multilingualism (Thinking）'}
+- {model: 'Qwen/Qwen3.5-0.8B', benchmark: 'WMT24++', mode: thinking, value: 27.2, verbatim: '27.2', group: 'Multilingualism (Thinking）'}
+- {model: 'Qwen/Qwen3.5-2B', benchmark: 'MAXIFE', mode: thinking, value: 60.6, verbatim: '60.6', group: 'Multilingualism (Thinking）'}
+- {model: 'Qwen/Qwen3.5-0.8B', benchmark: 'MAXIFE', mode: thinking, value: 39.2, verbatim: '39.2', group: 'Multilingualism (Thinking）'}

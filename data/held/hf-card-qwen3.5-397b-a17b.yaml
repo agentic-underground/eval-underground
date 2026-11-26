@@ -1,0 +1,14 @@
+source: hf-card-qwen3.5-397b-a17b
+held:
+- key:
+  - Qwen/Qwen3.5-397B-A17B
+  - BrowseComp
+  - unstated
+  a: null
+  b:
+    model: Qwen/Qwen3.5-397B-A17B
+    benchmark: BrowseComp
+    mode: unstated
+    value: 69.0/78.6
+    verbatim: 69.0/78.6
+    group: Search Agent³
